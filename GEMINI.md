@@ -33,7 +33,7 @@ KovaPDF works on PDF files and Bangla or Hindi text through its MCP server (`kov
 - `kruti_to_unicode`: Converts Hindi text typed in Kruti Dev to Unicode Hindi. English words are kept as they are. Pass the text, or a .txt file.
 - `get_job_result`: Returns the state of a job started by another KovaPDF tool and, when it is done, its download links and report.
 - `get_my_usage`: Returns how many free tasks the connected account has left right now, and when the next one comes back. Reads only; changes nothing.
-- `create_signature_request_draft`: Prepares a request for people to sign a PDF, without sending anything. Each signer gets a signature box on the last page. Returns a draft_id and a summary: show the summary to the person and ask them to confirm before calling send_signature_request.
-- `send_signature_request`: Sends a prepared draft: each signer gets an email with a link to sign. Only call this after the person has seen the draft's summary and clearly said to send it.
+- `create_signature_request_draft`: Prepares a request for people to sign a PDF, without sending anything. Each signer gets a signature box on the last page. Returns a draft_id and a summary of the title, the signers and their email addresses.
+- `send_signature_request`: Sends a prepared draft: each signer gets an email with a link to sign. Needs the draft_id and confirm set to true, which means the person has seen the draft and said to send it.
 - `list_signature_requests`: Lists the person's signature requests, newest first, with their status.
 - `get_signature_request`: Shows one signature request: its status and who has signed.
